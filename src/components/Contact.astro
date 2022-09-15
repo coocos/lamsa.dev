@@ -1,0 +1,39 @@
+---
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import StackOverflowIcon from "./icons/StackOverflowIcon.astro";
+
+const profiles = [
+  {
+    name: "GitHub",
+    url: "https://github.com/coocos/",
+    Icon: GitHubIcon,
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/kalle-martti-lamsa/",
+    Icon: LinkedInIcon,
+  },
+  {
+    name: "StackOverflow",
+    url: "https://stackoverflow.com/users/846748/kalle",
+    Icon: StackOverflowIcon,
+  },
+];
+---
+
+<ul class="flex justify-end gap-6 text-pink-800">
+  {
+    profiles.map(({ url, name, Icon }) => (
+      <li>
+        <a
+          href={url}
+          title={name}
+          class="inline-block hover:text-pink-600 transition-colors"
+        >
+          <Icon />
+        </a>
+      </li>
+    ))
+  }
+</ul>
