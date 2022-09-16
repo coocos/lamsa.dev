@@ -43,21 +43,21 @@ export async function getRepositories(): Promise<Repository[]> {
     },
     body: JSON.stringify({
       query: `query {
-	viewer {
-		repositories(first: 25, orderBy: {direction: DESC, field: CREATED_AT}, isFork: false, privacy: PUBLIC) {
-			nodes {
-				name
-        url
-				description
-				createdAt
-				languages(first: 5) {
-					nodes {
-						name
-					}
-				}
-			}
-		}
-	}}`,
+        viewer {
+          repositories(first: 25, orderBy: {direction: DESC, field: CREATED_AT}, isFork: false, privacy: PUBLIC) {
+            nodes {
+              name
+              url
+              description
+              createdAt
+              languages(first: 5, orderBy: {direction: DESC, field: SIZE}) {
+                nodes {
+                  name
+                }
+              }
+            }
+          }
+      }}`,
     }),
   });
   const json = RespositoryListApiResponse.parse(await response.json());
