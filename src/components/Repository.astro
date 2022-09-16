@@ -1,0 +1,25 @@
+---
+import type { Repository } from "../apis/getRepositories";
+export type Props = Repository;
+
+const { name, url, description, createdAt, languages } = Astro.props;
+---
+
+<div class="flex mb-2 text-lg">
+  <div>
+    <a href={url} class="text-pink-700 hover:text-pink-500">
+      {name}
+    </a>
+    <div>{description}</div>
+  </div>
+  <span class="ml-auto text-base text-gray-400">{createdAt.getFullYear()}</span>
+</div>
+<ul class="flex gap-2">
+  {
+    languages.map((name) => (
+      <li class="p-1 rounded-md mb-2 bg-gray-100 text-xs text-gray-500">
+        {name}
+      </li>
+    ))
+  }
+</ul>

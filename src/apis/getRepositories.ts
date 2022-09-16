@@ -27,7 +27,7 @@ const RespositoryListApiResponse = z.object({
   }),
 });
 
-type Repository = {
+export type Repository = {
   name: string;
   url: string;
   createdAt: Date;
