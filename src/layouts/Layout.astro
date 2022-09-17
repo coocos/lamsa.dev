@@ -11,7 +11,21 @@ const { title } = Astro.props;
   <head>
     <title>{title}</title>
     <meta charset="utf-8" />
+    <meta charset="author" content="Kalle Lämsä" />
+    <meta
+      name="description"
+      content="I'm Kalle Lämsä, a software developer based in northern Finland and this is my personal website."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Kalle Lämsä" />
+    <meta
+      property="og:description"
+      content="I'm Kalle Lämsä, a software developer based in northern Finland and this is my personal website."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lamsa.dev" />
+    <meta property="og:image" content="/images/preview.png" />
+    <meta property="og:image:alt" content="Photo of the author" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body class="bg-wavey bg-no-repeat">
