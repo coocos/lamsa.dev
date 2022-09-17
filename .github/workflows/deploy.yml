@@ -20,8 +20,6 @@ jobs:
         env:
           SECRET_GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
         run: npm run build
-      - name: List files
-        run: ls -l
       - name: Create artifact
         uses: actions/upload-artifact@v3
         with:
@@ -37,5 +35,15 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: site
-      - name: Deploy site
+          path: site
+      - name: List file
         run: ls -l
+      - name: Deploy site
+        uses: burnett01/rsync-deployments@5.2.1
+        with:
+          switches: -avzr
+          path: site/
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
