@@ -5,12 +5,12 @@ import Repository from "./Repository.astro";
 const repositories = await getRepositories();
 ---
 
-<h2 class="text-2xl text-pink-700 mb-4">Projects</h2>
-<p class="mb-8 text-lg text-gray-800">
+<h2 class="text-2xl text-pink-600 mb-4">Projects</h2>
+<p class="ml-1 mb-8 text-lg text-gray-700">
   I occasionally publish slightly dubious toy projects as open source. These
   probably aren't useful for you, but hey, who knows!
 </p>
-<ul>
+<ul class="ml-1">
   {
     repositories.map((repository) => (
       <li class="my-4">

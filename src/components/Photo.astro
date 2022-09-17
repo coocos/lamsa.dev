@@ -1,1 +1,14 @@
-<div class="w-48 h-48 bg-pink-600 mx-auto rounded-2xl my-16"></div>
+---
+import { Image } from "@astrojs/image/components";
+import photo from "../assets/photo.png";
+---
+
+<div class="flex justify-center mb-8">
+  <Image
+    src={photo}
+    width={320}
+    height={320}
+    format={"webp"}
+    alt="photo of the author"
+  />
+</div>

@@ -22,14 +22,16 @@ const profiles = [
 ];
 ---
 
-<ul class="flex justify-end gap-6 text-pink-800">
+<ul class="flex justify-end gap-6 text-gray-700">
   {
     profiles.map(({ url, name, Icon }) => (
       <li>
         <a
           href={url}
           title={name}
-          class="inline-block hover:text-pink-600 transition-colors"
+          target="_blank"
+          rel="noopener"
+          class="inline-block hover:text-pink-500 transition-colors"
         >
           <Icon />
         </a>

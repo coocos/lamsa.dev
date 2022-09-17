@@ -1,21 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Photo from "../components/Photo.astro";
-import Contact from "../components/Contact.astro";
+import Socials from "../components/Socials.astro";
 import Projects from "../components/Projects.astro";
 import Profile from "../components/Profile.astro";
 ---
 
 <Layout title="Kalle">
   <main class="mx-auto max-w-screen-sm p-8">
-    <nav class="mb-4 my-4">
-      <Contact />
+    <nav>
+      <Socials />
     </nav>
-    <section class="mb-8 my-4">
+    <section class="mb-12 my-4">
       <Photo />
       <Profile />
     </section>
-    <section class="mb-8 my-4">
+    <section class="my-4">
       <Projects />
     </section>
   </main>
