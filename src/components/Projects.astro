@@ -7,14 +7,14 @@ const repositories = await getRepositories();
 ---
 
 <Header>Projects</Header>
-<p class="ml-1 mb-8 text-lg text-gray-700">
+<p class="ml-1 mb-8 text-lg text-gray-700 dark:text-gray-300">
   I occasionally publish slightly dubious toy projects and examples as open
   source. These probably aren't useful for you, but hey, who knows!
 </p>
 <ul class="ml-1">
   {
     repositories.map((repository) => (
-      <li class="my-4">
+      <li class="my-6">
         <Repository {...repository} />
       </li>
     ))
