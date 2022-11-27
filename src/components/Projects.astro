@@ -1,14 +1,15 @@
 ---
 import { getRepositories } from "../apis/getRepositories";
+import Header from "./Header.astro";
 import Repository from "./Repository.astro";
 
 const repositories = await getRepositories();
 ---
 
-<h2 class="text-2xl text-pink-600 mb-4">Projects</h2>
+<Header>Projects</Header>
 <p class="ml-1 mb-8 text-lg text-gray-700">
-  I occasionally publish slightly dubious toy projects as open source. These
-  probably aren't useful for you, but hey, who knows!
+  I occasionally publish slightly dubious toy projects and examples as open
+  source. These probably aren't useful for you, but hey, who knows!
 </p>
 <ul class="ml-1">
   {
