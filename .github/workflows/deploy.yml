@@ -36,8 +36,6 @@ jobs:
         with:
           name: site
           path: site
-      - name: List file
-        run: ls -l
       - name: Deploy site
         uses: burnett01/rsync-deployments@5.2.1
         with:
