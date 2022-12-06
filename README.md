@@ -1,3 +1,3 @@
 # lamsa.dev
 
-My personal website powered by Astro & Tailwind.
+My personal website powered by [Astro](https://astro.build).
